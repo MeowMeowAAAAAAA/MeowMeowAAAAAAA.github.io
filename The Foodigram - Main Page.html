@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Foodigram</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="sub\stylesforfoodigram.css">
+    
+    <style>
+
+      body  {  
+        background-image:url("https://i.ibb.co/qjHpDrh/IMG-20230324-133556.png");  
+        background-repeat: repeat-y;
+        background-size: 100vw;
+        padding-bottom: 10vh;
+       }  
+
+      /*phone*/
+      @media only screen and (max-width: 767px){
+        button {
+        border: none;
+        appearance: none;
+        background-color: inherit;
+        position: absolute;
+      }
+        #content-button {
+          top: 25vh;
+        }
+        #content-sub-button-1, #content-sub-button-2 , #content-sub-button-3 {
+          top: 25vh;
+          transition: top 0.5s ease;
+          display: none;
+        }
+        #game-button {
+          top: 30vh;
+          transition: top 0.5s ease;
+        }
+        #game-button.moved {
+          top: 45vh;
+          transition: top 0.5s ease;
+        }
+        footer {
+          margin-top: 60vh;
+        }
+      }
+      /*desktop*/
+      @media only screen and (min-width: 768px){
+        button {
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+        position: absolute;
+      }
+        #content-button {
+          top: 65vh;
+        }
+        #content-sub-button-1, #content-sub-button-2 , #content-sub-button-3 {
+          top: 65vh;
+          transition: top 0.5s ease;
+          display: none;
+        }
+        #game-button {
+          top: 82vh;
+          transition: top 0.5s ease;
+        }
+        #game-button.moved {
+          top: 133vh;
+          transition: top 0.5s ease;
+        }
+        footer {
+          margin-top: 130vh;
+        }
+      }
+
+</style>
+
+<script>
+  const mobileQuery = window.matchMedia("(max-width: 767px)");
+  const desktopQuery = window.matchMedia("(min-width: 768px)");
+
+  function ToggleSubButtons() {
+    var subButton = document.getElementById('content-button');
+    var subButton1 = document.getElementById('content-sub-button-1');
+    var subButton2 = document.getElementById('content-sub-button-2');
+    var subButton3 = document.getElementById('content-sub-button-3');
+    var gameButton = document.getElementById('game-button');
+    if(gameButton.classList.contains("moved")){
+      if(mobileQuery.matches){
+          subButton1.style.top = '25vh';
+          subButton2.style.top = '25vh';
+          subButton3.style.top = '25vh';
+        }
+        else{
+          subButton1.style.top = '65vh';
+          subButton2.style.top = '65vh';
+          subButton3.style.top = '65vh';
+        }
+      setTimeout(function() {
+        subButton1.style.display = 'none';
+        subButton2.style.display = 'none';
+        subButton3.style.display = 'none';
+      }, 400);
+      gameButton.classList.remove("moved");
+    }
+    else{
+      subButton1.style.display = 'block';
+      subButton2.style.display = 'block';
+      subButton3.style.display = 'block';
+      gameButton.classList.add("moved");
+      setTimeout(function() {
+        if(mobileQuery.matches){
+          subButton1.style.top = '30vh';
+          subButton2.style.top = '35vh';
+          subButton3.style.top = '40vh';
+        }
+        else{
+          subButton1.style.top = '82vh';
+          subButton2.style.top = '99vh';
+          subButton3.style.top = '116vh';
+        }
+      }, 0);
+    }
+  }
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <div class="center">
+    <img src="https://i.ibb.co/g4r8RZr/ezgif-com-gif-maker-6.gif" class="centergif"  style="width:70vw;">
+  </div>
+	<!-- <img src="https://i.ibb.co/g4r8RZr/ezgif-com-gif-maker-6.gif" width="1300" height="600" class="centergif" style="margin-left: 330px;"> -->
+</header>
+
+<main>
+  <div class="center-buttons">
+    <button onclick="ToggleSubButtons()" id="content-button"><img src="https://i.ibb.co/kmzZSqh/IMG-20230324-150306.png" style="width:30vw;"/></button>
+    <a href="sub\The Foodigram - Funny Novelettes.html" target="_self"><button id="content-sub-button-1"><img src="https://i.ibb.co/3THnsmn/IMG-20230324-150047.png" style="width:30vw;"/></button></a>
+    <a href="sub\The Foodigram - Chilling Gossips.html" target="_self"><button id="content-sub-button-2"><img src="https://i.ibb.co/kBh4RmZ/IMG-20230324-150107.png" style="width:30vw;;"/></button></a>
+    <a href="sub\The Foodigram - Bottomline.html" target="_self"><button id="content-sub-button-3"><img src="https://i.ibb.co/fxsmfgr/IMG-20230324-150244.png" style="width:30vw;"/></button></a>
+    <a href="sub\The Foodigram - The Burgatory.html" target="_self"><button id="game-button"><img src="https://i.ibb.co/cN7j0r6/IMG-20230330-121701.png" style="width:27vw;"/></button></a>
+  </div>
+
+
+</main>
+
+</body>
+
+<footer>
+  <div class="left-section">
+    <span>Contact us:</span>
+    <div class="instagram-link">
+      <a href="https://www.instagram.com/__thefoodigram_/">
+        <img src="https://i.ibb.co/cbQKxVm/instagram-Logo-PNG-Transparent-Background-download.png"> 
+        <span>@_thefoodigram</span>
+      </a>
+    </div>
+  </div>
+  <div class="center-section">
+    <img src="https://i.ibb.co/z5mWkgj/IMG-20230324-154251.png">
+  </div>
+  <div class="right-section">
+    <ul>
+      <li>Created by:</li>
+      <li>Ayesha Mahaboob</li>
+      <li>Syeda Rania Mahek</li>
+      <li>Huda Tariq</li>
+    </ul>
+  </div>
+</footer>
+
+</html>

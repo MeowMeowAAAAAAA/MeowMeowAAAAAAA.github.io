@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>The Foodiegram - Cafe Area</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Righteous&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <canvas id="canvas1"></canvas>
+
+            <div id="canvas1">
+                <button id="instruction_button"><img src="https://i.ibb.co/xm5QTWt/instructionbutton.png" style="width:3vw"></button>
+
+                <button id="base_bun_button" class="hidden"><img src="https://i.ibb.co/nktNQRj/IMG-20230326-053806.png" style="width:10vw"></button>
+                <button id="base_bread_button" class="hidden"><img src="https://i.ibb.co/s6sDFPr/IMG-20230326-053634.png" style="width:10vw"></button>
+
+                <button id="cover_bun_button" class="hidden"><img src="https://i.ibb.co/s6w6Q3h/IMG-20230327-194038.png" style="width:10vw"></button>
+                <button id="cover_bread_button" class="hidden"><img src="https://i.ibb.co/s6sDFPr/IMG-20230326-053634.png" style="width:10vw"></button>
+
+                <button id="burger_chocolate_button" class="hidden"><img src="https://i.ibb.co/yNrxtvz/IMG-20230325-204410.png" style="width:10vw"></button>
+                <button id="burger_grilled_button" class="hidden"><img src="https://i.ibb.co/zVBT9M5/IMG-20230325-204331.png" style="width:10vw"></button>
+                <button id="burger_fried_button" class="hidden"><img src="https://i.ibb.co/t3pbPBL/IMG-20230325-204313.png" style="width:10vw"></button>
+                <button id="burger_squarefried_button" class="hidden"><img src="https://i.ibb.co/mc2JnWx/IMG-20230325-204253.png" style="width:10vw"></button>
+              
+                <button id="veggies_onion_button" class="hidden"><img src="https://i.ibb.co/YhDz6w3/IMG-20230325-204235.png" style="width:10vw"></button>
+                <button id="veggies_cucumber_button" class="hidden"><img src="https://i.ibb.co/1GvPmkB/IMG-20230325-204220.png" style="width:10vw"></button>
+                <button id="veggies_tomato_button" class="hidden"><img src="https://i.ibb.co/z5j5bdN/IMG-20230325-204205.png" style="width:10vw"></button>
+                <button id="veggies_pickles_button" class="hidden"><img src="https://i.ibb.co/mq0Xd69/IMG-20230325-204149.png" style="width:10vw"></button>
+             
+                <button id="sauce_green_button" class="hidden"><img src="https://i.ibb.co/LQ10Md5/IMG-20230325-204134.png" style="width:7vw"></button>
+                <button id="sauce_peach_button" class="hidden"><img src="https://i.ibb.co/W0pcXS5/IMG-20230325-204112.png" style="width:7vw"></button>
+                <button id="sauce_red_button" class="hidden"><img src="https://i.ibb.co/JQt4cqV/IMG-20230325-203908.png" style="width:7vw"></button>
+                <button id="sauce_yellow_button" class="hidden"><img src="https://i.ibb.co/SyzJMyN/IMG-20230325-204054.png" style="width:7vw"></button>
+              
+                <button id="leaf_leaf1_button" class="hidden"><img src="https://i.ibb.co/G9VHPZY/IMG-20230325-204039.png" style="width:10vw"></button>
+                <button id="leaf_leaf2_button" class="hidden"><img src="https://i.ibb.co/m4QWvg0/IMG-20230325-204025.png" style="width:10vw"></button>
+              
+                <button id="cheese_egg_button" class="hidden"><img src="https://i.ibb.co/x1mbM2K/IMG-20230325-204011.png" style="width:10vw"></button>
+                <button id="cheese_cheese_button" class="hidden"><img src="https://i.ibb.co/gmG526S/IMG-20230325-204627.png" style="width:10vw"></button>
+                <button id="cheese_holecheese_button" class="hidden"><img src="https://i.ibb.co/mDHGC6k/IMG-20230325-204604.png" style="width:10vw"></button>
+
+                <button id="spacebar_button"><img src="https://i.ibb.co/qmFjyJV/IMG-20230406-140228.png" style="width:22vw"></button>
+                <button id="up_button"><img src="https://i.ibb.co/qJxjhmY/IMG-20230406-144637.png" style="width:5vw"></button>
+                <button id="down_button"><img src="https://i.ibb.co/wgGNjBt/IMG-20230406-144657.png" style="width:5vw"></button>
+            </div>
+              
+            <!--customers-->
+            <img id="customer1" src="https://i.ibb.co/hYZk9NL/Untitled20-20230325113438.png">
+            <img id="customer2" src="https://i.ibb.co/RSnPRrJ/Untitled20-20230325113542.png">
+            <img id="customer3" src="https://i.ibb.co/9b9t2bf/Untitled20-20230325113130.png">
+            <img id="customer4" src="https://i.ibb.co/7zwJ080/Untitled20-20230325120630.png">
+            <img id="customer5" src="https://i.ibb.co/1TMstB4/Untitled20-20230325121701.png">
+            <img id="customer6" src="https://i.ibb.co/y53z2mJ/Untitled20-20230325120858.png">
+
+            <!--food items-->
+            <img id="plate" src="https://i.ibb.co/BtfkLtb/Untitled21-20230325151517.png">
+
+            <img id="coverdown_bun" src="https://i.ibb.co/vLL0hC6/Untitled21-20230325171207.png">
+            <img id="coverdown_bread" src="https://i.ibb.co/2jH0v2b/Untitled21-20230326053541.png">
+
+            <img id="coverup_bun" src="https://i.ibb.co/ZghXKzW/Untitled21-20230325180316.png">
+            <img id="coverup_bread" src="https://i.ibb.co/1vvGqt8/Untitled21-20230326053556.png">
+
+            <img id="burger_chocolate" src="https://i.ibb.co/cgT4yny/Untitled21-20230325171307.png">
+            <img id="burger_grilled" src="https://i.ibb.co/HtHQpgN/Untitled21-20230325171347.png">
+            <img id="burger_fried" src="https://i.ibb.co/BrsHJ45/Untitled21-20230325171613.png">
+            <img id="burger_squarefried" src="https://i.ibb.co/YBB0YGh/Untitled21-20230325172528.png">
+
+            <img id="veggies_onion" src="https://i.ibb.co/ZxLWS0x/Untitled21-20230325172548.png">
+            <img id="veggies_cucumber" src="https://i.ibb.co/WVSry0t/Untitled21-20230325172819.png">
+            <img id="veggies_tomato" src="https://i.ibb.co/K0dq7fK/Untitled21-20230325173003.png">
+            <img id="veggies_pickles" src="https://i.ibb.co/t4Dt52Q/Untitled21-20230325173127.png">
+
+            <img id="sauce_green" src="https://i.ibb.co/Qdn0LmR/Untitled21-20230325173210.png">
+            <img id="sauce_peach" src="https://i.ibb.co/P9M5Wt5/Untitled21-20230325173252.png">
+            <img id="sauce_red" src="https://i.ibb.co/2sM8fqN/Untitled21-20230325180235.png">
+            <img id="sauce_yellow" src="https://i.ibb.co/QXqyqMm/Untitled21-20230325173343.png">
+
+            <img id="leaf_leaf1" src="https://i.ibb.co/wRVnS8Z/Untitled21-20230325174500.png">
+            <img id="leaf_leaf2" src="https://i.ibb.co/6B1Bn9x/Untitled21-20230325174503.png">
+
+            <img id="cheese_egg" src="https://i.ibb.co/dmW3PGC/Untitled21-20230325174506.png">
+            <img id="cheese_cheese" src="https://i.ibb.co/g6NYhYq/Untitled21-20230325204540.png">
+            <img id="cheese_holecheese" src="https://i.ibb.co/GQ3Zxr3/Untitled21-20230325204436.png">
+
+            <!--background-->
+            <img id="kitchen" src="https://i.ibb.co/0yF8zSt/IMG-20230327-001337.png">
+            <img id="screen" src="https://i.ibb.co/prfSsYX/Untitled33-20230329110301.png">
+            <img id="box" src="https://i.ibb.co/6sYnBJG/IMG-20230329-102648.png">
+            <img id="shopname" src="https://i.ibb.co/ryCkXkB/IMG-20230406-203000.png">
+
+            <!--audio-->
+            <audio id="audioscore"><source src="sound_correct.mp3" type="audio/mpeg"></audio>
+            <audio id="audiounscore"><source src="sound_wrong.mp3" type="audio/mpeg"></audio>
+            <audio id="audiowin"><source src="sound_win.mp3" type="audio/mpeg"></audio>
+            <audio id="audiolose"><source src="sound_lose.mp3" type="audio/mpeg"></audio>
+
+            <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body  
+{  
+background-image:url("https://i.ibb.co/vx1cQd2/IMG-20230329-093713.png");  
+background-repeat: no-repeat;
+background-size: width 100vh;
+} 
+#canvas1{
+    border: 5px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    font-family: 'Monoton', cursive;
+}
+#kitchen, #box, #screen, #customer1, #customer2, #customer3, #customer4, #customer5, #customer6, #plate, #coverdown_bun, #coverdown_bread, #coverup_bun, #coverup_bread, #burger_chocolate, #burger_grilled, #burger_fried, #burger_squarefried, #veggies_cucumber, #veggies_tomato, #veggies_pickles, #veggies_onion, #sauce_red, #sauce_green, #sauce_yellow, #sauce_peach, #leaf_leaf1, #leaf_leaf2, #cheese_egg, #cheese_cheese, #cheese_holecheese{
+    display: none;
+}
+
+/*phone*/
+@media only screen and (max-width: 767px){
+    body{
+        background-position: -700px 0; 
+    }
+    #spacebar_button{
+        position: absolute;
+        top: 30vh;
+        left: -20vw;
+        border: none;
+        appearance: none;
+        background-color: inherit;
+    }
+    #up_button{
+        position: absolute;
+        top: 28vh;
+        left: 10vw;
+        border: none;
+        appearance: none;
+        background-color: inherit;
+    }
+    #down_button{
+        position: absolute;
+        top: 32vh;
+        left: 10vw;
+        border: none;
+        appearance: none;
+        background-color: inherit;
+    }
+
+    #instruction_button{
+        top: -19vh;
+        left: 45vw;
+    }
+    
+    #base_bun_button{
+        top: 9vh;
+        left: -15vw;
+    }
+    #base_bread_button{
+        top: 9vh;
+        left: 5vw;
+    }
+    
+    #cover_bun_button{
+        top: 9vh;
+        left: -15vw;
+    }
+    #cover_bread_button{
+        top: 9vh;
+        left: 5vw;
+    }
+    
+    #burger_chocolate_button{
+        top: 9vh;
+        left: -35vw;
+    }
+    #burger_grilled_button{
+        top: 9vh;
+        left: -15vw;
+    }
+    #burger_fried_button{
+        top: 9vh;
+        left: 5vw;
+    }
+    #burger_squarefried_button{
+        top: 9vh;
+        left: 25vw;
+    }
+    
+    #veggies_onion_button{
+        top: 9vh;
+        left: -35vw;
+    }
+    #veggies_cucumber_button{
+        top: 9vh;
+        left: -15vw;
+    }
+    #veggies_tomato_button{
+        top: 9vh;
+        left: 5vw;
+    }
+    #veggies_pickles_button{
+        top: 9vh;
+        left: 25vw;
+    }
+    
+    #sauce_green_button{
+        top: 10vh;
+        left: -35vw;
+    }
+    #sauce_peach_button{
+        top: 10vh;
+        left: -15vw;
+    }
+    #sauce_red_button{
+        top: 10vh;
+        left: 5vw;
+    }
+    #sauce_yellow_button{
+        top: 10vh;
+        left: 25vw;
+    }
+    
+    #leaf_leaf1_button{
+        top: 9vh;
+        left: -15vw;
+    }
+    #leaf_leaf2_button{
+        top: 9vh;
+        left: 5vw;
+    }
+    
+    #cheese_egg_button{
+        top: 9vh;
+        left: -35vw;
+    }
+    #cheese_cheese_button{
+        top: 9vh;
+        left: -15vw;
+    }
+    #cheese_holecheese_button{
+        top: 9vh;
+        left: 5vw;
+    }
+}
+/*desktop*/
+@media only screen and (min-width: 768px){
+    #spacebar_button, #up_button, #down_button {
+        display: none;
+    }
+
+    #instruction_button{
+        top: -45vh;
+        left: 30vw;
+        cursor: pointer;
+    }
+    
+    #base_bun_button{
+        top: 19vh;
+        left: -15vw;
+        cursor: pointer;
+    }
+    #base_bread_button{
+        top: 19vh;
+        left: 5vw;
+        cursor: pointer;
+    }
+    
+    #cover_bun_button{
+        top: 19vh;
+        left: -15vw;
+        cursor: pointer;
+    }
+    #cover_bread_button{
+        top: 19vh;
+        left: 5vw;
+        cursor: pointer;
+    }
+    
+    #burger_chocolate_button{
+        top: 19vh;
+        left: -25vw;
+        cursor: pointer;
+    }
+    #burger_grilled_button{
+        top: 19vh;
+        left: -13vw;
+        cursor: pointer;
+    }
+    #burger_fried_button{
+        top: 19vh;
+        left: -1vw;
+        cursor: pointer;
+    }
+    #burger_squarefried_button{
+        top: 19vh;
+        left: 11vw;
+        cursor: pointer;
+    }
+    
+    #veggies_onion_button{
+        top: 19vh;
+        left: -25vw;
+        cursor: pointer;
+    }
+    #veggies_cucumber_button{
+        top: 19vh;
+        left: -13vw;
+        cursor: pointer;
+    }
+    #veggies_tomato_button{
+        top: 19vh;
+        left: -1vw;
+        cursor: pointer;
+    }
+    #veggies_pickles_button{
+        top: 19vh;
+        left: 11vw;
+        cursor: pointer;
+    }
+    
+    #sauce_green_button{
+        top: 22vh;
+        left: -25vw;
+        cursor: pointer;
+    }
+    #sauce_peach_button{
+        top: 22vh;
+        left: -13vw;
+        cursor: pointer;
+    }
+    #sauce_red_button{
+        top: 22vh;
+        left: -1vw;
+        cursor: pointer;
+    }
+    #sauce_yellow_button{
+        top: 22vh;
+        left: 11vw;
+        cursor: pointer;
+    }
+    
+    #leaf_leaf1_button{
+        top: 22vh;
+        left: -15vw;
+        cursor: pointer;
+    }
+    #leaf_leaf2_button{
+        top: 22vh;
+        left: 5vw;
+        cursor: pointer;
+    }
+    
+    #cheese_egg_button{
+        top: 22vh;
+        left: -20vw;
+        cursor: pointer;
+    }
+    #cheese_cheese_button{
+        top: 22vh;
+        left: -5vw;
+        cursor: pointer;
+    }
+    #cheese_holecheese_button{
+        top: 22vh;
+        left: 10vw;
+        cursor: pointer;
+    }
+}
+
+#shopname {
+    position: absolute;
+    border: none;
+    appearance: none;
+    background-color: inherit;
+    width: 15vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#instruction_button, #base_bun_button, #base_bread_button, #cover_bun_button, #cover_bread_button, #burger_chocolate_button, #burger_grilled_button, #burger_fried_button, #burger_squarefried_button, #veggies_onion_button, #veggies_cucumber_button, #veggies_tomato_button, #veggies_pickles_button, #sauce_green_button, #sauce_peach_button, #sauce_red_button, #sauce_yellow_button, #leaf_leaf1_button, #leaf_leaf2_button, #cheese_egg_button, #cheese_cheese_button, #cheese_holecheese_button {
+    position: absolute;
+    border: none;
+    appearance: none;
+    background-color: inherit;
+}
+
+#instruction_button.hidden, #base_bun_button.hidden, #base_bread_button.hidden, #cover_bun_button.hidden, #cover_bread_button.hidden, #burger_chocolate_button.hidden, #burger_grilled_button.hidden, #burger_fried_button.hidden, #burger_squarefried_button.hidden, #veggies_onion_button.hidden, #veggies_cucumber_button.hidden, #veggies_tomato_button.hidden, #veggies_pickles_button.hidden, #sauce_green_button.hidden, #sauce_peach_button.hidden, #sauce_red_button.hidden, #sauce_yellow_button.hidden, #leaf_leaf1_button.hidden, #leaf_leaf2_button.hidden, #cheese_egg_button.hidden, #cheese_cheese_button.hidden, #cheese_holecheese_button.hidden {
+    display: none;
+}
